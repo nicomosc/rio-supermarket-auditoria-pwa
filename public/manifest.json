@@ -1,0 +1,17 @@
+{
+  "name": "Río Supermarket • Auditoría Tecnológica PWA",
+  "short_name": "Río Auditoría",
+  "description": "Sistema Web Progresivo (PWA) de Inspección y Auditoría Tecnológica para los 16 Departamentos de Río Supermarket",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
