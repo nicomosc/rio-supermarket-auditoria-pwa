@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase, AlertaReporteDiario } from '@/lib/supabase';
+import { supabase, AlertaReporteDiario, getTodayStr } from '@/lib/supabase';
 import { AlertTriangle, BellRing, CalendarClock, CheckCircle2, X } from 'lucide-react';
 
 interface AlertaReporteBannerProps {
@@ -14,10 +14,8 @@ function normalizarRespuestaRpc(raw: any): AlertaReporteDiario | null {
   const obj = Array.isArray(raw) ? raw[0] : raw;
   if (!obj) return null;
 
-  const hoy = new Date().toISOString().split('T')[0];
-  const dAyer = new Date();
-  dAyer.setDate(dAyer.getDate() - 1);
-  const ayer = dAyer.toISOString().split('T')[0];
+  const hoy = getTodayStr(0);
+  const ayer = getTodayStr(-1);
 
   // Soportar tanto formato JSON estructurado como tabla SQL de verificar_reporte_diario()
   const ayerOmitido = Boolean(

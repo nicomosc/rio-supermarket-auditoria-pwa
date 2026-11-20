@@ -3,11 +3,24 @@
 :root {
   --background: #f1f5f9;
   --foreground: #0f172a;
+  /* Paleta Oficial Río Supermarket (extraída de riomarket.com y ClientLogo.png) */
+  --rio-green: #087334;
+  --rio-green-logo: #00751E;
+  --rio-green-dark: #055223;
+  --rio-lime: #B2D034;
+  --rio-red: #DB0617;
+  --rio-cart-pink: #ED4284;
+  --rio-cart-lime: #94D200;
+  --rio-cart-orange: #FF8700;
+  --rio-cart-cyan: #0095D9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-rio-green: var(--rio-green);
+  --color-rio-lime: var(--rio-lime);
+  --color-rio-red: var(--rio-red);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
